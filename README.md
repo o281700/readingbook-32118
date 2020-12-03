@@ -22,3 +22,56 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# テーブル設計
+
+## usersテーブル
+
+| column             | type       | option                         |
+| ------------------ | ---------- | ------------------------------ |
+| nickname           | string     | nill: false                    |
+| email              | string     | nill: false, unique: true      |
+| encrypted_password | string     | nill: false                    |
+| book               | references | null: false, foreign_key: true |
+| comment            | references | null: false, foreign_key: true |
+
+### Association
+- has_many :books
+- has_many :comments
+
+## booksテーブル
+
+| colum      | type       | option                         |
+| ---------- | ---------- | ------------------------------ |
+| title      | string     | nill: false                    |
+| author     | string     | nill: false                    |
+| Impression | text       |                                |
+| user       | references | null: false, foreign_key: true |
+| comment    | references | null: false, foreign_key: true |
+| ranking    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- has_many :comment
+- has_many :ranking
+
+## commentテーブル
+
+| colum | type       | option                         |
+| ----- | ---------- | ------------------------------ |
+| text  | text       | nill: false                    |
+| user  | references | null: false, foreign_key: true |
+| book  | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :book
+
+## rankingテーブル
+
+| column | type       | option                         |
+| ------ | ---------- | ------------------------------ |
+| book   | references | null: false, foreign_key: true |
+
+### Association
+- belong_to :book
