@@ -35,7 +35,7 @@
 }
 
 /* Main Screen and Side Ber */
-.wrapper {
+.screen-field {
   display: flex;
   height: calc(100vh - 100px);
 }
@@ -45,7 +45,8 @@
   background-color: #333;
 }
 
-.main-screen {
+.main-wrapper {
+  height: calc(100vh - 100px);
   width: 75%;
   background-color: #e6f0f0;
 }
@@ -59,4 +60,13 @@
   border: 1px solid #000;
   margin-bottom: 10px;
   padding: 10px;
+}
+
+/* Log In and Sign Up */
+.sign-up-container {
+  padding: 30px;
+}
+
+.log-in-container {
+  padding: 30px;
 }
