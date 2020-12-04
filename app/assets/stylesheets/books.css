@@ -25,13 +25,10 @@
   text-decoration: none;
 }
 
-.user-guide {
-  padding: 20px;
-}
-
 .user-guide a {
   color: #fff;
   text-decoration: none;
+  padding: 20px;
 }
 
 /* Main Screen and Side Ber */
