@@ -16,16 +16,28 @@
           <h1><a href="/">ReadingBook</a></h1>
         </div>
         <div class='user-nav'>
-          <div class='user-guide'>
-            <a href='#'>ログイン</a>
-          </div>
-          <div class='user-guide'>
-            <a href='#'>新規登録</a>
-          </div>
+          <% if user_signed_in? %>
+            <div class='user-guide'>
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+              <%= link_to '新規投稿', url='#' %>
+            </div>
+          <% else %>
+            <div class='user-guide'>
+              <%= link_to 'ログイン', new_user_session_path %>
+              <%= link_to '新規登録', new_user_registration_path %>
+            </div>
+          <% end %>
         </div>
       </div>
     </header>
-    <%= yield %>
+    <div class='screen-field'>
+      <div class='side-wrapper'>
+        <%= render 'books/side_ber' %>
+      </div>
+      <div class='main-wrapper'>
+        <%= yield %>
+      </div>
+    </div>
     <footer></footer>
   </body>
 </html>

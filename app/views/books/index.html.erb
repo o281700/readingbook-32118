@@ -1,8 +1,12 @@
-<div class='wrapper'>
-  <div class='side-wrapper'>
-    <%= render 'side_ber' %>
-  </div>
-  <div class='main-screen'>
-    <%= render partial: 'main_content', locals: { books: @books } %>
-  </div>
+
+<div class="main-container">
+  <% @books.each do |book| %>
+    <% unless Book.nil? %>
+    <div class="book-item">
+      <%= "タイトル：#{book.title}" %>
+      <%= "著者：#{book.author}" %>
+      <p><%= book.impression %></p>
+    </div>
+    <% end %>
+  <% end %>
 </div>
