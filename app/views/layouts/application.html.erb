@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Readingbook32118</title>
+    <title>ReadingBook</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,21 @@
   </head>
 
   <body>
+    <header class='header-wrapper'>
+      <div class='header-container'>
+        <div class='app-title'>
+          <h1><a href="/">ReadingBook</a></h1>
+        </div>
+        <div class='user-nav'>
+          <div class='user-guide'>
+            <a href='#'>ログイン</a>
+          </div>
+          <div class='user-guide'>
+            <a href='#'>新規登録</a>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
