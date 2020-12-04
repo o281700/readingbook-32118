@@ -59,11 +59,7 @@
   padding: 10px;
 }
 
-/* Log In and Sign Up */
-.sign-up-container {
-  padding: 30px;
-}
-
-.log-in-container {
+/* Log In and Sign Up and New Posts */
+.main-field-wrapper {
   padding: 30px;
 }
