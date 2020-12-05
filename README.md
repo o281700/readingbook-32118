@@ -32,7 +32,6 @@ Things you may want to cover:
 | nickname           | string     | nill: false                    |
 | email              | string     | nill: false, unique: true      |
 | encrypted_password | string     | nill: false                    |
-| book               | references | null: false, foreign_key: true |
 | comment            | references | null: false, foreign_key: true |
 
 ### Association
@@ -48,12 +47,10 @@ Things you may want to cover:
 | Impression | text       |                                |
 | user       | references | null: false, foreign_key: true |
 | comment    | references | null: false, foreign_key: true |
-| ranking    | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 - has_many :comment
-- has_many :ranking
 
 ## commentテーブル
 
@@ -66,12 +63,3 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :book
-
-## rankingテーブル
-
-| column | type       | option                         |
-| ------ | ---------- | ------------------------------ |
-| book   | references | null: false, foreign_key: true |
-
-### Association
-- belong_to :book
