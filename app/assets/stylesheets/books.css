@@ -49,14 +49,21 @@
 }
 
 /* Main Screen */
-.main-container {
-  padding: 30px;
-}
 
 .book-item {
   border-bottom: 1px solid #000;
   margin-bottom: 10px;
   padding: 10px;
+  color: #000;  
+}
+
+.book-anchor {
+  text-decoration: none;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Log In and Sign Up and New Posts */
@@ -71,5 +78,15 @@
 
 .ranking-books {
   font-size: 20px;
+  font-weight: bold;
+}
+
+/* Show */
+.show-info {
+  padding: 30px;
+}
+
+.post-user {
+  text-align: right;
   font-weight: bold;
 }

@@ -1,11 +1,21 @@
-<div class='main-container'>
+<div class='main-field-wrapper'>
   <% @books.each do |book| %>
-    <%# unless Book.nil? %>
+    <%= link_to book_path(book.id), class: 'book-anchor' do %>
       <div class="book-item">
-        <%= "タイトル：#{book.title}" %>
-        <%= "著者：#{book.author}" %>
-        <p><%= book.impression %></p>
+        <div class='post-info'>
+          <div>
+            <%= "タイトル：#{book.title}" %>
+            <%= "著者：#{book.author}" %>
+          </div>
+          <div>
+            <%= book.user.nickname %>
+            <%= book.created_at %>
+          </div>
+        </div>
+        <p>
+          <%= book.impression %>
+        </p>
       </div>
-    <%# end %>
+    <% end %>
   <% end %>
 </div>
