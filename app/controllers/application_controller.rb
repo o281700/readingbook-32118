@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_ranking
 
   private
 
@@ -12,5 +13,9 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
+  end
+
+  def set_ranking
+    @ranking = Book.group(:title).order('count_all DESC').count
   end
 end

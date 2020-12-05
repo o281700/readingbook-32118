@@ -39,7 +39,7 @@
 
 .side-wrapper {
   width: 25%;
-  background-color: #333;
+  /* background-color: #333; */
 }
 
 .main-wrapper {
@@ -54,7 +54,7 @@
 }
 
 .book-item {
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -62,4 +62,14 @@
 /* Log In and Sign Up and New Posts */
 .main-field-wrapper {
   padding: 30px;
+}
+
+/* Ranking */
+.ranking-content {
+  padding-left: 20px;
+}
+
+.ranking-books {
+  font-size: 20px;
+  font-weight: bold;
 }
