@@ -19,7 +19,7 @@
           <% if user_signed_in? %>
             <div class='user-guide'>
               <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-              <%= link_to '新規投稿', url='#' %>
+              <%= link_to '新規投稿', new_book_path %>
             </div>
           <% else %>
             <div class='user-guide'>
