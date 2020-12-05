@@ -40,12 +40,14 @@
 .side-wrapper {
   width: 25%;
   /* background-color: #333; */
+  overflow: scroll;
 }
 
 .main-wrapper {
   height: calc(100vh - 100px);
   width: 75%;
   background-color: #e6f0f0;
+  overflow: scroll;
 }
 
 /* Main Screen */
@@ -81,12 +83,24 @@
   font-weight: bold;
 }
 
-/* Show */
+/* Books Show */
 .show-info {
   padding: 30px;
 }
 
 .post-user {
   text-align: right;
+  font-weight: bold;
+}
+
+/* Users Show */
+.user-show {
+  margin: 0 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.nickname-user-info {
+  padding: 20px;
   font-weight: bold;
 }
