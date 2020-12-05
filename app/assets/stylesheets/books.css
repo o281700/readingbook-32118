@@ -1,6 +1,6 @@
 /* header */
 .header-wrapper {
-  height: 100px;
+  height: 80px;
   width: 100%;
   background-color: #253141;
 }
@@ -39,14 +39,16 @@
 
 .side-wrapper {
   width: 25%;
-  /* background-color: #333; */
+  background-image: url(/images/1174747_s.jpg);
+  background-size: cover;
   overflow: scroll;
 }
 
 .main-wrapper {
   height: calc(100vh - 100px);
   width: 75%;
-  background-color: #e6f0f0;
+  background-image: url(/images/4022608_m.jpg);
+  background-size: cover;
   overflow: scroll;
 }
 
@@ -75,10 +77,14 @@
 
 /* Ranking */
 .ranking-content {
-  padding-left: 20px;
+  height: calc(100vh - 100px);
+  width: 25%;
+  background: rgba(255,255,255,0.6);
+  position: absolute;
 }
 
 .ranking-books {
+  padding-left: 20px;
   font-size: 20px;
   font-weight: bold;
 }
