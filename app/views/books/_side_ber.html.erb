@@ -1,0 +1,8 @@
+<div class='ranking-content'>
+  <h1>Ranking</h1>
+  <div class='ranking-books'>
+    <% @ranking.each_with_index do |rank, i| %>
+      <p><%= i +=1 %>.<%= rank.first %></p>
+    <% end %>
+  </div>
+</div>
