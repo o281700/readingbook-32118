@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
   def index
-    @books = Book.includes(:user).order("created_at DESC").first(5)
+    @books = Book.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -17,6 +17,10 @@ class BooksController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @book = Book.find(params[:id])
   end
 
   private
