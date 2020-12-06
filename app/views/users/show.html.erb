@@ -19,7 +19,7 @@
           <% end %>
           <div class='guide-show'>
             <%= link_to '削除', book_path(book.id), method: :delete %>
-            <%= link_to '編集', url='#' %>
+            <%= link_to '編集', edit_book_path(book.id) %>
           </div>
         </div>
       <% end %>

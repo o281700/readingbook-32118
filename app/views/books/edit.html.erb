@@ -1,0 +1,31 @@
+<div class="screen-field">
+  <div class='side-wrapper'>
+    <%= render partial: 'side_ber' %>
+  </div>
+  <div class='main-wrapper'>
+    <div class='main-field-wrapper'>
+      <h2>編集</h2>
+
+      <%= form_with model: @book ,local: true do |form| %>
+        <div>
+          <%= form.label :title %><br />
+          <%= form.text_field :title %>
+        </div>
+
+        <div>
+          <%= form.label :author %><br />
+          <%= form.text_field :author %>
+        </div>
+
+        <div>
+          <%= form.label :impression %><br />
+          <%= form.text_area :impression %>
+        </div>
+
+        <div>
+          <%= form.submit '投稿' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
