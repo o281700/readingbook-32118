@@ -1,5 +1,5 @@
 /* header */
-.header-wrapper {
+header {
   height: 80px;
   width: 100%;
   background-color: #253141;
@@ -31,21 +31,37 @@
   padding: 20px;
 }
 
+/* Footer */
+footer {
+  height: 60px;
+  width: 100%;
+  background-color: #253141;
+  position: relative;
+}
+
+.guide-under {
+  text-align: right;
+}
+
+.guide-under a {
+  display: inline-block;
+  align-items: center;
+}
+
 /* Main Screen and Side Ber */
 .screen-field {
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 160px);
 }
 
 .side-wrapper {
   width: 25%;
   background-image: url(/images/1174747_s.jpg);
   background-size: cover;
-  overflow: scroll;
 }
 
 .main-wrapper {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 160px);
   width: 75%;
   background-image: url(/images/4022608_m.jpg);
   background-size: cover;
@@ -77,10 +93,11 @@
 
 /* Ranking */
 .ranking-content {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 160px);
   width: 25%;
   background: rgba(255,255,255,0.6);
   position: absolute;
+  overflow: scroll;
 }
 
 .ranking-books {
