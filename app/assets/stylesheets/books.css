@@ -1,6 +1,6 @@
 /* header */
-.header-wrapper {
-  height: 100px;
+header {
+  height: 80px;
   width: 100%;
   background-color: #253141;
 }
@@ -31,22 +31,40 @@
   padding: 20px;
 }
 
+/* Footer */
+footer {
+  height: 60px;
+  width: 100%;
+  background-color: #253141;
+  position: relative;
+}
+
+.guide-under {
+  text-align: right;
+}
+
+.guide-under a {
+  display: inline-block;
+  align-items: center;
+}
+
 /* Main Screen and Side Ber */
 .screen-field {
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 160px);
 }
 
 .side-wrapper {
   width: 25%;
-  /* background-color: #333; */
-  overflow: scroll;
+  background-image: url(/images/1174747_s.jpg);
+  background-size: cover;
 }
 
 .main-wrapper {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 160px);
   width: 75%;
-  background-color: #e6f0f0;
+  background-image: url(/images/4022608_m.jpg);
+  background-size: cover;
   overflow: scroll;
 }
 
@@ -75,10 +93,15 @@
 
 /* Ranking */
 .ranking-content {
-  padding-left: 20px;
+  height: calc(100vh - 160px);
+  width: 25%;
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  overflow: scroll;
 }
 
 .ranking-books {
+  padding-left: 20px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -98,9 +121,32 @@
   margin: 0 50px;
   margin-bottom: 20px;
   border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
 }
 
-.nickname-user-info {
-  padding: 20px;
+.user-nickname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px 0 50px;
   font-weight: bold;
+  font-size: large;
+}
+
+.guide-show a {
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+  padding: 5px;
+  font-weight: bold;
+  display: block;
+  align-items: center;
+  width: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.book-item-show {
+  color: #000; 
 }
