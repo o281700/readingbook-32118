@@ -6,9 +6,14 @@
     <p class='nickname-user-info'><%= @nickname %>の投稿一覧</p>
     <% @books.each do |book| %>
       <div class='user-show'>
-        <h2><%= book.title %></h1>
-        <h4><%= book.author %></h3>
-        <p><%= book.impression %></p>
+        <div class='book-check'>
+          <%= check_box_tag "books_ids[]", book.id %>
+        </div>
+        <div>
+          <h2><%= book.title %></h1>
+          <h4><%= book.author %></h3>
+          <p><%= book.impression %></p>
+        </div>
       </div>
     <% end %>
   </div>
