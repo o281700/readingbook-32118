@@ -2,19 +2,26 @@
   <div class='side-wrapper'>
     <%= render partial: 'books/side_ber' %>
   </div>
+
   <div class='main-wrapper'>
-    <p class='nickname-user-info'><%= @nickname %>の投稿一覧</p>
-    <% @books.each do |book| %>
-      <div class='user-show'>
-        <div class='book-check'>
-          <%= check_box_tag "books_ids[]", book.id %>
+    <div class='user-nickname'>
+      <%= @nickname %>の投稿一覧
+    </div>
+    <div class='user-screen'>
+      <% @books.each do |book| %>
+        <div class='user-show'>
+          <%= link_to book_path(book.id), class: 'book-anchor' do %>
+            <div class='book-item-show'>
+              <h2><%= book.title %></h1>
+              <h4><%= book.author %></h3>
+              <p><%= book.impression %></p>
+            </div>
+          <% end %>
+          <div class='guide-show'>
+            <%= link_to '削除', book_path(book.id), method: :delete %>
+          </div>
         </div>
-        <div>
-          <h2><%= book.title %></h1>
-          <h4><%= book.author %></h3>
-          <p><%= book.impression %></p>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
