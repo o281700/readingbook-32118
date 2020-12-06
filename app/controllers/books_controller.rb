@@ -29,6 +29,12 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   private
 
   def book_params
