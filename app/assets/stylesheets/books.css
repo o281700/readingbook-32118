@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 /* header */
 header {
   height: 80px;
@@ -69,19 +73,12 @@ footer {
 }
 
 /* Main Screen */
-
-.book-item {
-  border-bottom: 1px solid #000;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: #000;  
+.item-wrapper {
+  border-bottom:  1px solid #000;
+  color: #000;
 }
 
-.book-anchor {
-  text-decoration: none;
-}
-
-.post-info {
+.book-info {
   display: flex;
   justify-content: space-between;
 }
@@ -109,11 +106,20 @@ footer {
 /* Books Show */
 .show-info {
   padding: 30px;
+  text-align: center;
+}
+
+.show-info span {
+  font-weight: bold;
 }
 
 .post-user {
   text-align: right;
   font-weight: bold;
+}
+
+.item-impression {
+  padding: 0 80px;
 }
 
 /* Users Show */
@@ -136,7 +142,6 @@ footer {
 
 .guide-show a {
   color: #000;
-  text-decoration: none;
   border: 2px solid #000;
   padding: 5px;
   font-weight: bold;

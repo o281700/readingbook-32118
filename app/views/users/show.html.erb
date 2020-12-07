@@ -1,7 +1,6 @@
 <div class="screen-field">
-  <div class='side-wrapper'>
-    <%= render partial: 'books/side_ber' %>
-  </div>
+
+  <%= render partial: 'books/side_ber' %>
 
   <div class='main-wrapper'>
     <div class='user-nickname'>
@@ -11,10 +10,17 @@
       <% @books.each do |book| %>
         <div class='user-show'>
           <%= link_to book_path(book.id), class: 'book-anchor' do %>
-            <div class='book-item-show'>
-              <h2><%= book.title %></h1>
-              <h4><%= book.author %></h3>
-              <p><%= book.impression %></p>
+            <div class='user-contents'>
+              <%= image_tag '/images/book-image.png', height: '15%', width: '15%' %>
+              <div class='book-item-show'>
+                <div>
+                  <%= book.title %>
+                  <%= book.author %>
+                </div>
+                <div>
+                  <%= book.impression %>
+                </div>
+              </div>
             </div>
           <% end %>
           <div class='guide-show'>

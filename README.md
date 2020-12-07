@@ -44,7 +44,7 @@ Things you may want to cover:
 | ---------- | ---------- | ------------------------------ |
 | title      | string     | nill: false                    |
 | author     | string     | nill: false                    |
-| Impression | text       |                                |
+| impression | text       |                                |
 | user       | references | null: false, foreign_key: true |
 | comment    | references | null: false, foreign_key: true |
 
