@@ -1,20 +1,21 @@
 <div class='main-field-wrapper'>
   <% @books.each do |book| %>
     <%= link_to book_path(book.id), class: 'book-anchor' do %>
-      <div class="book-item">
-        <div class='post-info'>
-          <div>
-            <%= "タイトル：#{book.title}" %>
-            <%= "著者：#{book.author}" %>
+      <div class='item-wrapper'>
+        <%= image_tag '/images/book-image.png', height: '10%', width: '10%' %>
+        <div class='book-info'>
+          <div class='book-title'>
+            <%= book.title %>
+            <%= book.author %>
           </div>
-          <div>
+          <div class='book-post'>
             <%= book.user.nickname %>
             <%= book.created_at %>
           </div>
         </div>
-        <p>
-          <%= book.impression %>
-        </p>
+        <div>
+          <%= book.impression%>
+        </div>
       </div>
     <% end %>
   <% end %>

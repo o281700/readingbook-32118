@@ -1,15 +1,16 @@
 <div class="screen-field">
-  <div class='side-wrapper'>
-    <%= render partial: 'side_ber' %>
-  </div>
+
+  <%= render partial: 'books/side_ber' %>
+
   <div class='main-wrapper'>
     <div class='show-info'>
-      <h1><%= @book.title %></h1>
-      <h3><%= @book.author %></h3>
+      <span><%= "投稿者：#{@book.user.nickname}" %></span>
+      <p><h1><%= @book.title %></h1></p>
+      <%= image_tag '/images/book-image.png', height: '40%', width: '40%' %>
+      <h3><%= "著者：#{@book.author}" %></h3>
+    </div>
+    <div class='item-impression'>
       <p><%= @book.impression %></p>
-      <div class='post-user'>
-        <%= @book.user.nickname %>
-      </div>
     </div>
   </div>
 </div>

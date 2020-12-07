@@ -32,9 +32,11 @@
     </header>
     <%= yield %>
     <footer>
-      <div class='user-guide guide-under'>
-        <%= link_to '新規投稿', new_book_path %>
-      </div>
+      <% if user_signed_in? %>
+        <div class='user-guide guide-under'>
+          <%= link_to '新規投稿', new_book_path %>
+        </div>
+      <% end %>
     </footer>
   </body>
 </html>
