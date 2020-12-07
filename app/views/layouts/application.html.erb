@@ -10,33 +10,6 @@
   </head>
 
   <body>
-    <header>
-      <div class='header-container'>
-        <div class='app-title'>
-          <h1><a href="/">ReadingBook</a></h1>
-        </div>
-        <div class='user-nav'>
-          <% if user_signed_in? %>
-            <div class='user-guide'>
-              <%= link_to current_user.nickname, user_path(current_user.id) %>
-              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-            </div>
-          <% else %>
-            <div class='user-guide'>
-              <%= link_to '新規登録', new_user_registration_path %>
-              <%= link_to 'ログイン', new_user_session_path %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </header>
     <%= yield %>
-    <footer>
-      <% if user_signed_in? %>
-        <div class='user-guide guide-under'>
-          <%= link_to '新規投稿', new_book_path %>
-        </div>
-      <% end %>
-    </footer>
   </body>
 </html>

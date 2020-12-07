@@ -1,34 +1,32 @@
+<%= render partial: 'books/header_layout' %>
+
 <div class="screen-field">
 
   <%= render partial: 'books/side_ber' %>
 
   <div class='main-wrapper'>
     <div class='user-nickname'>
-      <h2><%= @nickname %>の投稿一覧</h2>
+      <h2>【 <%= @nickname %>の投稿一覧 】</h2>
     </div>
-    <div class='user-screen'>
+    <div class='show-user'>
       <% @books.each do |book| %>
-        <div class='user-show'>
-          <%= link_to book_path(book.id), class: 'book-anchor' do %>
-            <div class='user-contents'>
-              <%= image_tag '/images/book-image.png', height: '15%', width: '15%' %>
-              <div class='book-item-show'>
-                <div>
-                  <%= book.title %>
-                  <%= book.author %>
-                </div>
-                <div>
-                  <%= book.impression %>
-                </div>
+        <%= link_to book_path(book.id) do %>
+          <div class='item-wrapper'>
+            <%= image_tag '/images/book-image.png', height: '10%', width: '10%' %>
+            <div class='book-item-show'>
+              <div>
+                <%= book.title %>
+                <%= book.author %>
+              </div>
+              <div>
+                <%= book.impression %>
               </div>
             </div>
-          <% end %>
-          <div class='guide-show'>
-            <%= link_to '削除', book_path(book.id), method: :delete %>
-            <%= link_to '編集', edit_book_path(book.id) %>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
 </div>
+
+<%= render partial: 'books/footer_layout' %>
