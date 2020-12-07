@@ -113,13 +113,11 @@ footer {
   font-weight: bold;
 }
 
-.post-user {
-  text-align: right;
-  font-weight: bold;
-}
-
-.item-impression {
-  padding: 0 80px;
+.item-impression, .comment-container {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  /* padding: 0 100px; */
 }
 
 /* Users Show */
@@ -154,4 +152,10 @@ footer {
 
 .book-item-show {
   color: #000; 
+}
+
+/* Comment area */
+.comment-form {
+  width: 100%;
+  margin-bottom: 5px;
 }

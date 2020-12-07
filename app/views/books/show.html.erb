@@ -12,8 +12,25 @@
     <div class='item-impression'>
       <p><%= @book.impression %></p>
     </div>
-    <div>
-      
+    <div class='comment-container'>
+      <div class='comments'>
+        <h4>【  コメント一覧  】</h4>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <p>
+              <%= comment.user.nickname %>
+              ：
+              <%= comment.text %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+      <% if user_signed_in? && current_user.id != @book.user.id %>
+        <%= form_with(model: [@book, @comment], local: true) do |form| %>
+          <%= form.text_area :text, rows: '5',  placeholder: 'コメントを入力してください', class: 'comment-form' %>
+          <%= form.submit '送信', class: 'comment-form' %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
