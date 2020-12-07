@@ -4,7 +4,7 @@
 
   <div class='main-wrapper'>
     <div class='show-info'>
-      <span><%= "投稿者：#{@book.user.nickname}" %></span>
+      <span><%= link_to "投稿者：#{@book.user.nickname}", user_path(@book.user.id) %></span>
       <p><h1><%= @book.title %></h1></p>
       <%= image_tag '/images/book-image.png', height: '40%', width: '40%' %>
       <h3><%= "著者：#{@book.author}" %></h3>
@@ -18,7 +18,7 @@
         <% if @comments %>
           <% @comments.each do |comment| %>
             <p>
-              <%= comment.user.nickname %>
+              <%=link_to comment.user.nickname, user_path(comment.user.id) %>
               ：
               <%= comment.text %>
             </p>
