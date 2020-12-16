@@ -1,23 +1,29 @@
 <div class='main-field-wrapper'>
-  <h2>【 BooksList 】</h2>
+  <h2>【 投稿一覧 】</h2>
   <% @books.each do |book| %>
-    <%= link_to book_path(book.id) do %>
-      <div class='item-wrapper'>
-        <%= image_tag '/images/book-image.png', height: '10%', width: '10%' %>
-        <div class='book-info'>
-          <div class='book-title'>
-            <%= book.title %>
-            <%= book.author %>
+      <p>
+        <div class="book-content">
+          <div class='book-image'>
+            <%=link_to image_tag('/images/book-image.png', height: '80%', width: '80%'), book_path(book.id) %>
           </div>
-          <div class='book-post'>
-            <%= book.user.nickname %>
-            <%= book.created_at %>
+          <div class='arrow_box'>
+            <div class='book-info'>
+              <div class='book-title'>
+                <p>
+                  <%= "作品名：#{book.title}" %>
+                  /
+                  <%= "著者：#{book.author}" %>
+                </p>
+              </div>
+              <div class='book-post'>
+                <%= link_to "投稿者：#{book.user.nickname}", user_path(book.user.id) %>
+              </div>
+            </div>
+            <div>
+              <%= book.impression%>
+            </div>
           </div>
         </div>
-        <div>
-          <%= book.impression%>
-        </div>
-      </div>
-    <% end %>
+      </p>
   <% end %>
 </div>

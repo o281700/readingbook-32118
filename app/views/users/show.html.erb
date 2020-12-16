@@ -6,27 +6,23 @@
 
   <div class='main-wrapper'>
     <div class='user-nickname'>
-      <h2>【 <%= @nickname %>の投稿一覧 】</h2>
+      <h2>【 <%= @nickname %>の本棚 <i class="fa fa-calendar" aria-hidden="true"></i> 】</h2>
     </div>
     <div class='show-user'>
       <% @books.each do |book| %>
-        <%= link_to book_path(book.id) do %>
           <div class='item-wrapper'>
-            <%= image_tag '/images/book-image.png', height: '10%', width: '10%' %>
-            <div class='book-item-show'>
-              <div>
-                <%= book.title %>
-                <%= book.author %>
+            <%= link_to book_path(book.id) do %>
+              <%= image_tag '/images/book-image.png', height: '70%', width: '70%' %>
+              <div class='book-item-show'>
+                <div>
+                  <%= "作成者：#{book.title}" %>
+                  <br />
+                  <%= "著者：#{book.author}" %>
+                </div>
               </div>
-              <div>
-                <%= book.impression %>
-              </div>
-            </div>
+            <% end %>
           </div>
-        <% end %>
       <% end %>
     </div>
   </div>
 </div>
-
-<%= render partial: 'books/footer_layout' %>
