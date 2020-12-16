@@ -7,6 +7,7 @@
       <% if user_signed_in? %>
         <div class='user-guide'>
           <%= link_to current_user.nickname, user_path(current_user.id) %>
+          <%= link_to '新規投稿', new_book_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
         </div>
       <% else %>

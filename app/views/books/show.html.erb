@@ -14,9 +14,22 @@
     <div class='item-impression'>
       <p><%= @book.impression %></p>
     </div>
+    <% if @book.user.id == current_user.id %>
+      <div class='book-nav'>
+        <div class='book-guide'> 
+          <%= link_to edit_book_path(@book.id) do %>
+            <i class="fa fa-edit fa-2x" aria-hidden="true" >編集</i>
+          <% end %>
+          <p class='text-p'>or</p>
+          <%= link_to book_path(@book.id), method: :delete do %>
+            <i class="fa fa-trash-o fa-2x" aria-hidden="true">削除</i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
     <div class='comment-container'>
       <div class='comments'>
-        <h4>【  コメント一覧  】</h4>
+        <h3>【  コメント一覧  】</h3>
         <% if @comments %>
           <% @comments.each do |comment| %>
             <p>
@@ -36,5 +49,3 @@
     </div>
   </div>
 </div>
-
-<%= render partial: 'footer_layout', locals: { book: @book } %>

@@ -3,6 +3,10 @@ a {
   color: #000;
 }
 
+li {
+  list-style: none;
+}
+
 /* header */
 header {
   height: 80px;
@@ -20,19 +24,17 @@ header {
   display: flex;
 }
 
-.app-title {
-  color: #ffffff;
+.app-title a {
+  color: #fff;
   padding-left: 20px;
 }
 
-.app-title a {
-  color: #fff;
-  text-decoration: none;
+.user-guide {
+  display: flex;
 }
 
 .user-guide a {
   color: #fff;
-  text-decoration: none;
   padding: 20px;
 }
 
@@ -44,19 +46,19 @@ footer {
   position: relative;
 }
 
-.guide-under {
+/* .guide-under {
   text-align: right;
 }
 
 .guide-under a {
   display: inline-block;
   align-items: center;
-}
+} */
 
 /* Main Screen and Side Ber */
 .screen-field {
   display: flex;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 100px);
 }
 
 .side-wrapper {
@@ -66,7 +68,7 @@ footer {
 }
 
 .main-wrapper {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 100px);
   width: 75%;
   background-image: url(/images/4022608_m.jpg);
   background-size: cover;
@@ -75,8 +77,10 @@ footer {
 
 /* Main Screen */
 .item-wrapper {
-  border-bottom:  1px solid #000;
   margin-bottom: 10px;
+  width: 25%;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .book-info {
@@ -86,6 +90,8 @@ footer {
 
 .show-user {
   margin: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Log In and Sign Up and New Posts */
@@ -95,7 +101,7 @@ footer {
 
 /* Ranking */
 .ranking-content {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 100px);
   width: 25%;
   background: rgba(255,255,255,0.5);
   position: absolute;
@@ -122,6 +128,26 @@ footer {
   display: block;
   width: 50%;
   margin: 0 auto;
+}
+
+.book-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.book-guide {
+  display: flex;
+  align-items: center;
+}
+
+.book-guide a {
+  color: #000;
+}
+
+.text-p {
+  text-align: center;
+  margin: 0 1em;
+  font-size: 20px;
 }
 
 /* Users Show */
@@ -155,4 +181,45 @@ footer {
 .comment-form {
   width: 100%;
   margin-bottom: 5px;
+}
+
+/* Index */
+.arrow_box{
+  position:relative;
+  width:70%;
+  height:10em;
+  background:#E6E6E6;
+  padding:20px;
+  text-align:left;
+  color:#333333;
+  font-size:0.9em;
+  font-weight:bold;
+  border-radius:2.5em;
+  margin: 1.5em;
+}
+.arrow_box:after{
+  border: solid transparent;
+  content:'';
+  height:0;
+  width:0;
+  pointer-events:none;
+  position:absolute;
+  border-top-width:1em;
+  border-bottom-width:1em;
+  border-left-width:2em;
+  border-right-width:2em;
+  margin-top: -1em;
+  border-right-color:#E6E6E6;
+  right:100%;
+  top:41%;
+}
+
+
+.book-content {
+  display: flex;
+  align-items: center;
+}
+
+.book-image {
+  width: 20%;
 }
